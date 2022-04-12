@@ -2632,4 +2632,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /******/ })()
 ;
-//# sourceMappingURL=flowbite.js.map

@@ -110,7 +110,7 @@ const Player = function () {
         key: "template",
         value: function template() {
             let html = `
-<audio class="Player-source" src="${this.music[0].src}" preload="none" crossorigin="anonymous"></audio>
+<audio class="Player-source" src="${this.music[0].src}" preload="none"></audio>
 <div class="my-3 flex items-center justify-around text-gray-500 dark:text-zinc-300">
                                 <div data-id="music-img" class="overflow-hidden rounded-full mr-2 Player-picture">
                                     <div class="rounded-full w-12 h-12">
@@ -180,7 +180,7 @@ const Player = function () {
 <ul id="music-list" class="text-sm font-bold Player-list">`;
             for(let index in this.music){
                 html += `
-<li data-index="${index}" class="music-item cursor-pointer rounded transition hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-gray-600/30 dark:hover:text-sky-400 py-1 px-4 block whitespace-no-wrap">
+<li data-index="${index}" class="music-item line-clamp-1 cursor-pointer rounded transition hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-gray-600/30 dark:hover:text-sky-400 py-1 px-4 block whitespace-no-wrap">
 ${parseInt(index) + 1}&nbsp;&nbsp;${this.music[index].name} - ${this.music[index].author}</li>
             `;
             }

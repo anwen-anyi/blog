@@ -4,7 +4,7 @@ code[class*=language-], pre[class*=language-] {
     color: #f8f8f2;
     background: 0 0;
     text-shadow: 0 1px rgba(0, 0, 0, .3);
-    font-family: 'Cascadia Mono', 'Noto Sans SC', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: 'Cascadia Mono', 'Noto Sans SC','Microsoft YaHei', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     font-size: 13px;
     text-align: left;
     white-space: pre;
@@ -161,7 +161,9 @@ pre[class*=language-].line-numbers {
 
 pre[class*=language-].line-numbers > code {
     position: relative;
-    white-space: inherit
+    white-space: inherit;
+    padding: 0;
+    margin: 0;
 }
 
 .line-numbers .line-numbers-rows {

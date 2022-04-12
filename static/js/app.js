@@ -106,10 +106,10 @@ function data() {
         commentQQ: '', commentName: '', commentEmail: '', commentText: '', commentUrl: '',
         commentAvatar: CuteenConfig.static_cdn_url + '/img/avatar.svg',
         AjaxGetCommentInfo() {
-            fetch(CuteenConfig.api, {
+            fetch(CuteenConfig.index + '/action/cuteen', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
-                body: `routeType=get_qq_info&qq=` + this.commentQQ
+                body: JSON.stringify({type: "getAvatar", qq: this.commentQQ})
             }).then(res => res.json()).then(res => {
                 this.commentAvatar = res.data.qq_avatar;
                 document.getElementById('author').value = res.data.name;
